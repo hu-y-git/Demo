@@ -1,4 +1,4 @@
-﻿import QtQuick 2.0
+﻿import QtQuick 2.12
 import QtQuick.Controls 1.4
 
 //人脸识别界面
@@ -10,8 +10,8 @@ Rectangle {
         spacing: parent.height * 0.07
         anchors.top: parent.top
         anchors.topMargin:parent.width * 0.05
-        //人脸扫描框
 
+        //人脸扫描框
         BorderImage {
             anchors.left: parent.left
             anchors.right: parent.right
@@ -20,6 +20,12 @@ Rectangle {
             source:"qrc:/pdbod_selcet.png"
             border.left: 31; border.top: 31
             border.right: 31; border.bottom: 31
+            ScanPage{
+                anchors.fill: parent
+                height:parent.height
+                width:parent.width
+                anchors.margins: 10
+            }
         }
 
         //进度框

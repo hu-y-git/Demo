@@ -9,5 +9,6 @@
         <file>pdbod_selcet.png</file>
         <file>zy1.png</file>
         <file>zy2.png</file>
+        <file>bg_scan_line.png</file>
     </qresource>
 </RCC>

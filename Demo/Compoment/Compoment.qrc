@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>MyTextField.qml</file>
+        <file>CameraMask.qml</file>
+        <file>ScanPage.qml</file>
     </qresource>
 </RCC>

@@ -1,6 +1,9 @@
 ﻿import QtQuick 2.12
+import QtQuick.Controls 1.4
 
+//登录界面
 Rectangle {
+    signal goLogin()
     anchors.fill: parent
     color: "transparent"
     Column{
@@ -30,10 +33,18 @@ Rectangle {
             anchors.horizontalCenter: parent.horizontalCenter
 
             Image{
+                id:user_img
                 source:"qrc:/user.png"
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.left: parent.left
                 anchors.leftMargin: parent.width * 0.05
+            }
+
+            MyTextField {
+                placeholderText: "请输入用户名"
+                height:parent.height
+                anchors.left: user_img.right
+                width:parent.width - user_img.width
             }
         }
 
@@ -47,10 +58,19 @@ Rectangle {
             radius: height / 6
             anchors.horizontalCenter: parent.horizontalCenter
             Image{
+                id:pass_img
                 source:"qrc:/password.png"
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.left: parent.left
                 anchors.leftMargin: parent.width * 0.05
+            }
+
+            MyTextField {
+                height:parent.height
+                placeholderText: "请输入密码器"
+                echoMode: TextInput.Password
+                anchors.left: pass_img.right
+                width:parent.width - pass_img.width
             }
         }
 
@@ -71,6 +91,13 @@ Rectangle {
                 horizontalAlignment: Text.AlignHCenter
                 font.bold: true
                 color: "white"
+                font.family: "SimHei"
+            }
+            MouseArea{
+                anchors.fill: parent
+                onClicked: {
+                    goLogin()
+                }
             }
         }
 
@@ -93,6 +120,7 @@ Rectangle {
                 anchors.bottom: parent.bottom
                 font.pixelSize: parent.height * 0.3
                 color: "white"
+                font.family: "SimHei"
             }
 
             Text{
@@ -104,8 +132,19 @@ Rectangle {
                 anchors.bottom: parent.bottom
                 font.pixelSize: parent.height * 0.3
                 color: "white"
+                font.family: "SimHei"
             }
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
 

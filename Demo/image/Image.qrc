@@ -3,5 +3,11 @@
         <file>password.png</file>
         <file>user.png</file>
         <file>user1.png</file>
+        <file>xuanzhaun.png</file>
+        <file>BorderRect8.png</file>
+        <file>pdbod_defult.png</file>
+        <file>pdbod_selcet.png</file>
+        <file>zy1.png</file>
+        <file>zy2.png</file>
     </qresource>
 </RCC>

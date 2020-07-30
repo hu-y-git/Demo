@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>LogIn.qml</file>
+        <file>FaceIdentify.qml</file>
     </qresource>
 </RCC>

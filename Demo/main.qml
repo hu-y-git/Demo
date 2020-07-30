@@ -31,8 +31,21 @@ Window {
             }
         }
 
-    LogIn{
+        //用户登录界面
+        LogIn{
             id:login
+            visible: true
+            onGoLogin: {
+                console.log("登录中")
+                face.visible = true
+            }
+        }
+
+        //人脸识别界面
+        FaceIdentify{
+            id:face
+            visible: false
+
         }
     }
 }

@@ -106,19 +106,27 @@ debug/qrc_qml.cpp: ../Demo/qml.qrc \
 	D:\Qt\5.12.7\mingw73_64\bin\rcc.exe -name qml ..\Demo\qml.qrc -o debug\qrc_qml.cpp
 
 debug/qrc_Compoment.cpp: ../Demo/Compoment/Compoment.qrc \
-		../../../Qt/5.12.7/mingw73_64/bin/rcc.exe
+		../../../Qt/5.12.7/mingw73_64/bin/rcc.exe \
+		../Demo/Compoment/MyTextField.qml
 	D:\Qt\5.12.7\mingw73_64\bin\rcc.exe -name Compoment ..\Demo\Compoment\Compoment.qrc -o debug\qrc_Compoment.cpp
 
 debug/qrc_Page.cpp: ../Demo/Page/Page.qrc \
 		../../../Qt/5.12.7/mingw73_64/bin/rcc.exe \
-		../Demo/Page/LogIn.qml
+		../Demo/Page/LogIn.qml \
+		../Demo/Page/FaceIdentify.qml
 	D:\Qt\5.12.7\mingw73_64\bin\rcc.exe -name Page ..\Demo\Page\Page.qrc -o debug\qrc_Page.cpp
 
 debug/qrc_Image.cpp: ../Demo/image/Image.qrc \
 		../../../Qt/5.12.7/mingw73_64/bin/rcc.exe \
+		../Demo/image/pdbod_selcet.png \
 		../Demo/image/user1.png \
 		../Demo/image/password.png \
-		../Demo/image/user.png
+		../Demo/image/xuanzhaun.png \
+		../Demo/image/BorderRect8.png \
+		../Demo/image/user.png \
+		../Demo/image/zy2.png \
+		../Demo/image/zy1.png \
+		../Demo/image/pdbod_defult.png
 	D:\Qt\5.12.7\mingw73_64\bin\rcc.exe -name Image ..\Demo\image\Image.qrc -o debug\qrc_Image.cpp
 
 compiler_moc_predefs_make_all: debug/moc_predefs.h

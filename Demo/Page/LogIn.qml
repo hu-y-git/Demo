@@ -7,13 +7,13 @@ Rectangle {
     anchors.fill: parent
     color: "transparent"
     Column{
-        height: parent.height * 4 / 5
-        width: parent.width
-        anchors.centerIn: parent
-        spacing: parent.height * 0.07
+//        height: parent.height * 4 / 5
+//        width: parent.width
+        anchors.fill: parent
+        spacing: parent.height * 0.02
         //用户图标
         Image{
-            source: "qrc:/user1.png"
+            source: "qrc:/icon.png"
             height: parent.height * 0.17
             width: height
             fillMode: Image.PreserveAspectFit
@@ -22,12 +22,43 @@ Rectangle {
             anchors.horizontalCenter: parent.horizontalCenter
         }
 
+        //公司名
+        Rectangle{
+            height: parent.height * 0.1
+            width: parent.width
+            color: "transparent"
+            Text{
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                text: "国电蚌埠发电有限公司"
+                anchors.fill: parent
+                font.pixelSize: height * 0.5
+                font.bold: true
+                font.family: "SimHei"
+            }
+        }
+
+        Rectangle{
+            height: parent.height * 0.1
+            width: parent.width
+            color: "transparent"
+            Text{
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                text: "人员识别系统"
+                anchors.fill: parent
+                font.pixelSize: height * 0.5
+                font.bold: true
+                font.family: "SimHei"
+            }
+        }
+
         //用户名
         Rectangle{
             border.color: "#03B3C7"
             border.width: 1
             color: "transparent"
-            height: parent.height * 0.15
+            height: parent.height * 0.07
             width: parent.width * 0.8
             radius: height / 6
             anchors.horizontalCenter: parent.horizontalCenter
@@ -45,6 +76,7 @@ Rectangle {
                 height:parent.height
                 anchors.left: user_img.right
                 width:parent.width - user_img.width
+                font.family: "SimHei"
             }
         }
 
@@ -53,7 +85,7 @@ Rectangle {
             border.color: "#03B3C7"
             border.width: 1
             color: "transparent"
-            height: parent.height * 0.15
+            height: parent.height * 0.07
             width: parent.width * 0.8
             radius: height / 6
             anchors.horizontalCenter: parent.horizontalCenter
@@ -71,6 +103,7 @@ Rectangle {
                 echoMode: TextInput.Password
                 anchors.left: pass_img.right
                 width:parent.width - pass_img.width
+                font.family: "SimHei"
             }
         }
 
@@ -79,14 +112,14 @@ Rectangle {
             border.color: "#03B3C7"
             border.width: 1
             color: "#1296db"
-            height: parent.height * 0.15
+            height: parent.height * 0.07
             width: parent.width * 0.8
             radius: height / 6
             anchors.horizontalCenter: parent.horizontalCenter
             Text{
                 anchors.centerIn: parent
                 text: "登录"
-                font.pixelSize: parent.height * 0.5
+                font.pixelSize: parent.height * 0.4
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignHCenter
                 font.bold: true
@@ -106,7 +139,7 @@ Rectangle {
             border.color: "transparent"
             border.width: 0
             color: "transparent"
-            height: parent.height * 0.15
+            height: parent.height * 0.07
             width: parent.width * 0.8
             radius: height / 2
             anchors.horizontalCenter: parent.horizontalCenter
@@ -118,7 +151,7 @@ Rectangle {
                 anchors.left: parent.left
                 anchors.top: parent.top
                 anchors.bottom: parent.bottom
-                font.pixelSize: parent.height * 0.3
+                font.pixelSize: parent.height * 0.4
                 color: "white"
                 font.family: "SimHei"
             }
@@ -130,7 +163,7 @@ Rectangle {
                 anchors.right: parent.right
                 anchors.top: parent.top
                 anchors.bottom: parent.bottom
-                font.pixelSize: parent.height * 0.3
+                font.pixelSize: parent.height * 0.4
                 color: "white"
                 font.family: "SimHei"
             }

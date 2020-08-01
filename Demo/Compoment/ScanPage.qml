@@ -23,6 +23,7 @@ Page{
     Camera
     {
         id:camera
+        position: Camera.FrontFace
     }
 
     VideoOutput

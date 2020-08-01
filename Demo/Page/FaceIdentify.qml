@@ -3,20 +3,21 @@ import QtQuick.Controls 1.4
 
 //人脸识别界面
 Rectangle {
+
+    signal faceInfo()
+
     anchors.fill: parent
-    color: "#021B39"
+    color: "transparent"
     Column{
         anchors.fill: parent
-        spacing: parent.height * 0.07
-        anchors.top: parent.top
-        anchors.topMargin:parent.width * 0.05
+        height: parent.height
+        width: parent.width
+        spacing: parent.height * 0.02
 
         //人脸扫描框
         BorderImage {
-            anchors.left: parent.left
-            anchors.right: parent.right
-            height: width
-            anchors.margins: parent.width * 0.05
+            width: parent.width
+            height: parent.height * 0.85
             source:"qrc:/pdbod_selcet.png"
             border.left: 31; border.top: 31
             border.right: 31; border.bottom: 31
@@ -28,19 +29,61 @@ Rectangle {
             }
         }
 
-        //进度框
-        Image
-        {
-            width: parent.width/4
-            height:width
-            source: "qrc:/zy2.png"
-            fillMode: Image.PreserveAspectFit
-            anchors.horizontalCenter: parent.horizontalCenter
-            RotationAnimation on rotation {
-                from: 0
-                to: 360
-                duration: 1500
-                loops: Animation.Infinite
+        Row{
+            width: parent.width
+            height: parent.height * 0.07
+            spacing: parent.width * 0.1
+
+            //人员识信息
+            Rectangle{
+                border.color: "#03B3C7"
+                border.width: 1
+                color: "#1296db"
+                height: parent.height
+                width: parent.width * 0.45
+                radius: height / 6
+                Text{
+                    anchors.centerIn: parent
+                    text: "人员识别"
+                    font.pixelSize: parent.height * 0.35
+                    verticalAlignment: Text.AlignVCenter
+                    horizontalAlignment: Text.AlignHCenter
+                    font.bold: true
+                    color: "white"
+                    font.family: "SimHei"
+                }
+                MouseArea{
+                    anchors.fill: parent
+//                    onClicked: {
+//                        goLogin()
+//                    }
+                }
+            }
+
+            //我的信息
+            Rectangle{
+                border.color: "#03B3C7"
+                border.width: 1
+                color: "#1296db"
+                height: parent.height
+                width: parent.width * 0.45
+                radius: height / 6
+                Text{
+                    anchors.centerIn: parent
+                    text: "我的信息"
+                    font.pixelSize: parent.height * 0.35
+                    verticalAlignment: Text.AlignVCenter
+                    horizontalAlignment: Text.AlignHCenter
+                    font.bold: true
+                    color: "white"
+                    font.family: "SimHei"
+                }
+                MouseArea{
+                    anchors.fill: parent
+                    onClicked: {
+                        faceInfo()
+                    }
+                }
             }
         }
     }

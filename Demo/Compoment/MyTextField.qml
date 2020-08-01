@@ -11,13 +11,13 @@ T.TextField{
     font{
         family: "SimHei"
         pixelSize: parent.height * 0.3
-        weight: Font.Bold
+        //weight: Font.Bold
     }
 
     padding: 6
     leftPadding: padding+4
     //placeholderText: "Input Password"
-    placeholderTextColor: "gray"
+    placeholderTextColor: "#03B3C7"
     verticalAlignment: TextInput.AlignVCenter
 
     selectByMouse: true
